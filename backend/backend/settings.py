@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'users',
-    'products',
+    'rest_framework_simplejwt.token_blacklist',
+    
 ]
 
 REST_FRAMEWORK = {
@@ -141,6 +142,7 @@ from datetime import timedelta
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'BLACKLIST_AFTER_ROTATION': True,
 # it's just to extend time of expiration for access token
 
 }
