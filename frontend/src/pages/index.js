@@ -11,3 +11,4 @@ export { default as Courses } from "./Courses";
 export { default as PostProducts } from "./PostProducts";
 export { default as PostTools } from "./PostTools";
 export { default as PostLands } from "./PostLands";
+export { default as UserProfile } from "./UserProfile";
