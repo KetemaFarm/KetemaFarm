@@ -33,6 +33,7 @@ class LoginSerializer(serializers.Serializer):
             raise serializers.ValidationError("Invalid credentials")
         return user
 
+
 class LogoutSerializer(serializers.Serializer):
     refresh = serializers.CharField()
 
@@ -46,3 +47,11 @@ class LogoutSerializer(serializers.Serializer):
             token.blacklist()
         except TokenError:
             self.fail('bad_token')
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'phone', 'email', 'first_name', 'last_name',
+                  'role', 'date_joined', 'last_login']
+        read_only_fields = ['id', 'phone', 'role', 'date_joined', 'last_login']

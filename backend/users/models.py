@@ -48,5 +48,5 @@ class User(AbstractUser):
 
     objects = UserManager()  # Use our custom manager
 
-    def __str__(self):
+    def str(self):
         return self.phone
