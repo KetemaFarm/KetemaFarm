@@ -13,10 +13,10 @@ import {
   PostLands,
   PostProducts,
   PostTools,
+  UserProfile,
 } from "./pages";
 
 import { loader as homeLoader } from "./pages/Home";
-
 
 const router = createBrowserRouter([
   {
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader:homeLoader,
+        loader: homeLoader,
       },
       {
         path: "about",
@@ -48,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "lands",
         element: <LandListings />,
+      },
+      {
+        path: "profile",
+        element: <UserProfile />,
       },
     ],
   },
@@ -73,7 +77,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/postTools",
-    element: <PostTools/>,
+    element: <PostTools />,
     errorElement: <Error />,
   },
 ]);
@@ -83,7 +87,5 @@ function App() {
 }
 
 export default App;
-
-
 
 // json-server --watch products.json --port 8080
