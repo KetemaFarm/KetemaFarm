@@ -21,6 +21,9 @@ import {
 } from "./pages";
 
 import { loader as homeLoader } from "./pages/Home";
+
+import ProfileSetting from "./pages/ProfileSetting";
+
 import { loader as singleProductLoader } from "./pages/SingleProduct";
 import { loader as singleLandLoader } from "./pages/SingleLand";
 import { loader as singleToolLoader } from "./pages/SingleTool";
@@ -90,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <UserProfile />,
+      },
+      {
+        path: "profileSetting",
+        element: <ProfileSetting />,
       },
     ],
   },
