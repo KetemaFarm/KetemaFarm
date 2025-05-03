@@ -1,4 +1,4 @@
 const PostLands = () => {
-  return <div>PostLands</div>;
+  return <div className="mt-24">PostLands</div>;
 };
 export default PostLands;
