@@ -2,17 +2,17 @@
   "featuredProducts": [
     {
       "id": 1,
-      "productName": "Golden Wheat",
+      "title": "Golden Wheat",
       "description": "Fresh organic wheat, perfect for baking.",
       "farmerName": "John Doe",
       "category": "cereals",
       "price": 15.99,
       "size": "1kg",
-      "image": "https://images.unsplash.com/photo-1589923188900-cbbc2e55a45f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 2,
-      "productName": "Sunflower Flower",
+      "title": "Sunflower Flower",
       "description": "Bright yellow sunflower flowers for decoration.",
       "farmerName": "Alice Green",
       "category": "flower",
@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "productName": "Tomato Seedlings",
+      "title": "Tomato Seedlings",
       "description": "Healthy tomato seedlings for your garden.",
       "farmerName": "Carlos Silva",
       "category": "seedling",

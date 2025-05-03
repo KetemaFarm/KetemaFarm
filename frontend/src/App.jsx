@@ -14,9 +14,16 @@ import {
   PostProducts,
   PostTools,
   UserProfile,
+  SingleTool,
+  SingleLand,
+  SingleProduct,
+  Cart,
 } from "./pages";
 
 import { loader as homeLoader } from "./pages/Home";
+import { loader as singleProductLoader } from "./pages/SingleProduct";
+import { loader as singleLandLoader } from "./pages/SingleLand";
+import { loader as singleToolLoader } from "./pages/SingleTool";
 
 const router = createBrowserRouter([
   {
@@ -50,7 +57,38 @@ const router = createBrowserRouter([
         element: <LandListings />,
       },
       {
-        path: "profile",
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "products/:id",
+        element: <SingleProduct />,
+        loader: singleProductLoader,
+      },
+      {
+        path: "lands/:id",
+        element: <SingleLand />,
+        loader: singleLandLoader,
+      },
+      {
+        path: "tools/:id",
+        element: <SingleTool />,
+        loader: singleToolLoader,
+      },
+      {
+        path: "/postLands",
+        element: <PostLands />,
+      },
+      {
+        path: "/postProducts",
+        element: <PostProducts />,
+      },
+      {
+        path: "/postTools",
+        element: <PostTools />,
+      },
+      {
+        path: "/profile",
         element: <UserProfile />,
       },
     ],
@@ -63,21 +101,6 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/postLands",
-    element: <PostLands />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/postProducts",
-    element: <PostProducts />,
-    errorElement: <Error />,
-  },
-  {
-    path: "/postTools",
-    element: <PostTools />,
     errorElement: <Error />,
   },
 ]);

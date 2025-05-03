@@ -1,16 +1,29 @@
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import {
+  Hero,
+  FeaturedProducts,
+  TestimonialCarousel,
+  FeaturedLands,
+  FeaturedTools,
+} from "../components";
 
 export const loader = async () => {
-  // const response = await axios.get("http://localhost:8080/products");
-  // console.log(response);
-  // return response.data;
-  return null;
+  // const products = await axios.get("http://localhost:8080/featuredProducts");
+  // const lands = await axios.get("http://localhost:8081/featuredLands");
+  // const tools = await axios.get("http://localhost:8082/featuredTools");
+  // return { products: products.data, lands: lands.data, tools: tools.data };
+  return null
 };
 
 const Home = () => {
-  // const  data  = useLoaderData();
-  // console.log(data);
-  return <div className="h-screen bg-green-50">Home</div>;
+  return (
+    <div className="mt-24">
+      <Hero />
+      <FeaturedProducts />
+      <FeaturedLands />
+      <FeaturedTools />
+      <TestimonialCarousel />
+    </div>
+  );
 };
 export default Home;

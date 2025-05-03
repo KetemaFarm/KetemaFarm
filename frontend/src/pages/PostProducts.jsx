@@ -1,6 +1,6 @@
 const PostProducts = () => {
   return (
-    <div>PostProducts</div>
+    <div className="mt-24">PostProducts</div>
   )
 }
 export default PostProducts

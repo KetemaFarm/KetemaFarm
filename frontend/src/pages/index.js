@@ -11,4 +11,8 @@ export { default as Courses } from "./Courses";
 export { default as PostProducts } from "./PostProducts";
 export { default as PostTools } from "./PostTools";
 export { default as PostLands } from "./PostLands";
+export { default as SingleProduct } from "./SingleProduct";
+export { default as SingleLand } from "./SingleLand";
+export { default as SingleTool } from "./SingleTool";
+export { default as Cart } from "./Cart";
 export { default as UserProfile } from "./UserProfile";

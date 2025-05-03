@@ -6,7 +6,7 @@ const AppLayout = () => {
   const isPageLoading = navigation.state === "loading";
   return (
     <>
-      <div className="fixed w-screen">
+      <div className="fixed w-screen z-40">
         <Header />
         <Navbar />
       </div>
