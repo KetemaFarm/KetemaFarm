@@ -39,7 +39,7 @@ const ProductsGrid = () => {
   ];
 
   return (
-    <div className="pt-12 flex flex-row justify-center flex-wrap gap-4 ">
+    <div className="pt-12 flex flex-row justify-center flex-wrap gap-8 ">
       {products.map((product) => {
         const { title, price, image } = product;
         return (

@@ -15,7 +15,7 @@ const LandsGrid = () => {
     },
     {
       id: 2,
-      title: "Balcony Space in Condominium",
+      title: "Balcony Condominium",
       description: "Cozy balcony space suitable for herb and vertical farming.",
       location: "CMC, Addis Ababa",
       image: "https://example.com/images/balcony1.jpg",
@@ -34,16 +34,16 @@ const LandsGrid = () => {
   ];
 
   return (
-    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="pt-12 flex flex-row justify-center flex-wrap gap-8 ">
       {lands.map((land) => {
         const { title, price, image } = land;
         return (
           <Link
             key={land.id}
             to={`/lands/${land.id}`}
-            className="card w-full shadow-xl hover:shadow-2xl transition duration-300"
+            className="card w-70 flex flex-col justify-center items-center shadow-xl hover:shadow-2xl transition duration-300 border-1 border-amber-900 "
           >
-            <figure className="px-4 pt-4">
+            <figure className="p-4">
               <img
                 src={image}
                 alt={title}
@@ -51,10 +51,15 @@ const LandsGrid = () => {
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-productName capitalize tracking-wider">
+              <h2 className="card-productName capitalize tracking-wider font-['Montserrat']">
                 {title}
               </h2>
-              <span className="text-secondary">{price}</span>
+              <span className="text-secondary font-['Montserrat']">
+                {price}Br Per care
+              </span>
+              <button className="font-['Kanit'] bg-amber-900 text-gray-100 p-1 rounded-lg w-50 ">
+                View details
+              </button>
             </div>
           </Link>
         );

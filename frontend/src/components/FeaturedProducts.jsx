@@ -3,7 +3,7 @@ import ProductsGrid from "./ProductsGrid";
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-24">
+    <section className="pt-24">
       <div>
         <h1 className="text-2xl font-bold font-['Montserrat'] text-green-900 text-center">
           Featured Marketplace Products
