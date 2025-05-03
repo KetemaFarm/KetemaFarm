@@ -153,14 +153,14 @@ const TestimonialCarousel = () => {
           <div className="absolute -top-16 right-0 flex space-x-4">
             <button
               onClick={goToPrevious}
-              className=" px-4 py-2 rounded-md shadow-5xl border-1 border-gray-800 text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
+              className=" px-4 py-2 rounded-md shadow-5xl  text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
               aria-label="Previous testimonials"
             >
               <MdArrowBackIosNew className="size-5" />
             </button>
             <button
               onClick={goToNext}
-              className=" px-4 py-2 rounded-md shadow-5xl border-1 border-gray-800 text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
+              className=" px-4 py-2 rounded-md shadow-5xl  text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
               aria-label="Next testimonials"
             >
               <GrNext />

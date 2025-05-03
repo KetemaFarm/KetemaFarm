@@ -11,7 +11,7 @@ const Search = () => {
         />
         <button
           type="submit"
-          className="bg-green-900 lg:w-20 lg:text-xs font-['Rubik'] h-8 flex flex-row justify-center items-center text-[10px] p-1 w-15 rounded-r-md text-gray-200"
+          className="bg-green-900 lg:w-20 lg:text-xs font-['Rubik'] h-8 flex flex-row justify-center items-center text-[10px] p-1 w-15 rounded-r-md text-gray-200 cursor-pointer"
         >
           Search
         </button>
