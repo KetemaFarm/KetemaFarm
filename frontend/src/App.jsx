@@ -17,6 +17,7 @@ import {
 } from "./pages";
 
 import { loader as homeLoader } from "./pages/Home";
+import ProfileSetting from "./pages/ProfileSetting";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "profile",
         element: <UserProfile />,
+      },
+      {
+        path: "profileSetting",
+        element: <ProfileSetting />,
       },
     ],
   },
