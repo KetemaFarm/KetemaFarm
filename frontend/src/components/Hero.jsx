@@ -8,7 +8,7 @@ const Hero = () => {
           Your Urban Farming Marketplace Grow, Sell, Thrive!
         </p>
 
-        <p className="mt-8 leading-6 font-['Montserrat'] text-sm  text-center lg:text-start  ">
+        <p className="mt-8 leading-6 font-['Montserrat'] text-sm  text-center lg:text-start ">
           Buy fresh farm products, rent urban land, or sell your harvest – all
           in one place." "Join as a buyer, landowner, or seller to grow your
           city’s green future.

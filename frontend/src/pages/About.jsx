@@ -1,23 +1,26 @@
-import backgroundImage from "../assets/bgImage.jpg";
+// import backgroundImage from "../assets/bgImage.jpg";
 import image1 from "../assets/Image.jpg";
+import aboutImg from "../assets/aboutImg.png";
 const About = () => {
   return (
     // <div className="h-screen">About</div>
     <div className="md:h-650">
-      <section
-        className="h-[85vh] bg-cover bg-center mt-29"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="flex flex-col items-center justify-center h-full text-center text-white px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            About KetemaFarm
-          </h1>
-          <p className="mt-3 text-base sm:text-lg max-w-md">
-            Greening our cities. Empowering local farmers.
-          </p>
-          <button className="mt-15 bg-green-600 hover:bg-green-700 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full transition cursor-pointer">
-            Learn More
-          </button>
+      <section className=" ">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center h-full text-center px-4">
+          <div className="mt-10">
+            <h1 className="text-2xl text-green-900 sm:text-4xl md:text-5xl font-bold font-['Rubik']">
+              About KetemaFarm
+            </h1>
+            <p className="mt-3 text-xs text-center font-['Montserrat']">
+              At KetemaFarm, we believe cities can be greener, healthier, and
+              more self-sufficient. Our platform connects buyers, landowners,
+              product sellers, and tool suppliers in a thriving urban farming
+              ecosystem. Whether you’re growing fresh produce on a balcony,
+              renting unused land, or shopping for organic goods, we’re here to
+              make sustainable living accessible to everyone.
+            </p>
+          </div>
+          <img src={aboutImg} alt="farmer's Image" className="mt-18 w-60" />
         </div>
       </section>
 
