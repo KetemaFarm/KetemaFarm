@@ -13,7 +13,7 @@ const AppLayout = () => {
       {isPageLoading ? (
         <Loading />
       ) : (
-        <section className="">
+        <section className="mt-2">
           <Outlet />
         </section>
       )}

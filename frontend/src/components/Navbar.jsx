@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="dropdown">
             <label
               htmlFor="my-drawer"
-              className="btn btn-primary drawer-button bg-gray-100 border-1 border-green-900 md:hidden"
+              className="btn btn-primary drawer-button bg-gray-100 border-1 border-green-900 lg:hidden"
             >
               <FaBarsStaggered className="size-5 text-green-950" />
             </label>
