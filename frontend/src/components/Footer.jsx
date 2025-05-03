@@ -8,74 +8,71 @@ import SocialLinks from "./SocialLinks";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="py-8 flex flex-col mx-auto max-w-6xl md:justify-around lg:justify-between items-center space-y-4 md:flex-row space-x-0 lg:space-x-8 md:items-start">
+    <footer className="bg-green-950">
+      <div className="py-8 flex flex-row gap-6 justify-center sm:gap-16 sm:justify-between mx-14 flex-wrap font-['Montserrat']  items-start space-y-4 md:flex-row space-x-0 lg:space-x-8 md:items-start">
         {/* LOGO */}
-        <div className="hidden lg:flex lg:flex-col space-y-2 max-w-sm items-center md:items-start">
-          <img src={logo} alt="logo" className="w-40 h-auto" />
-          <p className="text-gray-500">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Voluptatibus eum exercitationem inventore amet omnis unde iusto
-            similique officiis aut beatae!
+        <div className=" hidden lg:flex lg:flex-col space-y-2 max-w-sm items-center md:items-start">
+          <img src={logo} alt="logo" className="w-40 h-auto invert" />
+          <p className="text-gray-100 text-sm">
+            Cultivate Connections in the City
           </p>
         </div>
         {/* CONTACT INFO */}
         <div className="flex flex-col space-y-2 ">
-          <h4 className="font-bold text-lg mb-2">Contact Information</h4>
-          <p className="">
-            <HiLocationMarker className="inline" />
-            <span className="text-gray-500 px-2 py-1">
+          <h4 className="font-bold text-gray-300 text-lg mb-2">
+            Contact Information
+          </h4>
+          <p className="text-sm">
+            <HiLocationMarker className="inline text-gray-100" />
+            <span className="text-gray-100 px-2 py-1">
               732 Despard St, Atlanta
             </span>
           </p>
-          <p className="">
-            <MdEmail className="inline" />
-            <span className="text-gray-500 px-2 py-1">+97 888 8888</span>
+          <p className="text-sm">
+            <MdEmail className="inline text-gray-100" />
+            <span className="text-gray-100 px-2 py-1">+97 888 8888</span>
           </p>
-          <p className="">
-            <FaPhoneAlt className="inline" />
-            <span className="text-gray-500 px-3 py-1">info@traveller.com</span>
+          <p className="text-sm">
+            <FaPhoneAlt className="inline text-gray-100" />
+            <span className="text-gray-100 px-3 py-1">info@traveller.com</span>
           </p>
         </div>
         {/* QUICK LINK */}
         <div className="flex flex-col space-y-2 items-center md:items-start">
-          <h4 className="font-bold text-lg mb-2">Quick Link</h4>
+          <h4 className="font-bold text-lg mb-2 text-gray-300">Quick Link</h4>
           <Link
             to="/"
-            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+            className="duration-200 hover:text-gray-200 hover:font-medium text-sm text-gray-100"
           >
             Home
           </Link>
           <Link
             to="about"
-            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+            className="duration-200 hover:text-gray-200 hover:font-medium text-sm text-gray-100"
           >
             About Us
           </Link>
           <Link
             to="lands"
-            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+            className="duration-200 hover:text-gray-200 hover:font-medium text-sm text-gray-100"
           >
             Lands
           </Link>
           <Link
             to="products"
-            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+            className="text-gray-100 duration-200 hover:text-gray-200 hover:font-medium text-sm"
           >
             Products
           </Link>
         </div>
         {/* FOLLOW US */}
-        <div className="flex flex-col space-y-2 items-center md:items-start">
-          <h4 className="font-bold text-lg mb-2">Follow US</h4>
+        <div className="flex flex-col space-y-2 items-center  md:items-start">
+          <h4 className="font-bold text-lg mb-2 text-gray-300">Follow US</h4>
           <SocialLinks />
         </div>
       </div>
-      <div className="bg-black text-white py-8 text-center">
-        <p>
-          Copyright © All rights reserved (Website Developed & Managed by
-          creativechroma)
-        </p>
+      <div className="bg-green-950 text-gray-100 py-8 text-center font-['Kanit']">
+        <p>Copyright © All rights reserved</p>
       </div>
     </footer>
   );
