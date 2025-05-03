@@ -5,20 +5,20 @@ const AppLayout = () => {
   const navigation = useNavigation();
   const isPageLoading = navigation.state === "loading";
   return (
-    <>
-      <div className="fixed w-screen z-40">
+    <div className="bg-gray-100">
+      <div>
         <Header />
         <Navbar />
       </div>
       {isPageLoading ? (
         <Loading />
       ) : (
-        <section className="mx-auto max-w-6xl px-8 py-20">
+        <section className="mx-auto px-6">
           <Outlet />
         </section>
       )}
       <Footer />
-    </>
+    </div>
   );
 };
 export default AppLayout;

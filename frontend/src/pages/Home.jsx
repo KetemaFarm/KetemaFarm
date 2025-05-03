@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import {
   Hero,
   FeaturedProducts,
@@ -12,12 +12,12 @@ export const loader = async () => {
   // const lands = await axios.get("http://localhost:8081/featuredLands");
   // const tools = await axios.get("http://localhost:8082/featuredTools");
   // return { products: products.data, lands: lands.data, tools: tools.data };
-  return null
+  return null;
 };
 
 const Home = () => {
   return (
-    <div className="mt-24">
+    <div className="mt-10">
       <Hero />
       <FeaturedProducts />
       <FeaturedLands />

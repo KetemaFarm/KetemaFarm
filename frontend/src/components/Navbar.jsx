@@ -7,46 +7,56 @@ import { useSelector } from "react-redux";
 const Navbar = () => {
   const numItemsInCart = useSelector((store) => store.cartState.numItemsInCart);
   return (
-    <>
-      <div className="relative z-40">
-        <nav className="glass bg-black opacity-80">
-          <div className="navbar mx-auto max-w-6xl px-2">
-            <div className="navbar-start">
-              <div className="dropdown">
-                <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                  <FaBarsStaggered className="h-6 w-6" />
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-900 rounded-box w-52"
-                >
-                  <NavLinks />
+    <nav className="relative z-40 bg-[url(/KetemaFarm/frontend/src/assets/NavBack.png)] bg-cover bg-center ">
+      <div className="navbar  px-2 mt-4 sm:mt-16 md:mt-4">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <label
+              htmlFor="my-drawer"
+              className="btn btn-primary drawer-button bg-gray-100 border-1 border-green-900 md:hidden"
+            >
+              <FaBarsStaggered className="size-5 text-green-950" />
+            </label>
+            <div>
+              <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content"></div>
+              <div className="drawer-side">
+                <label
+                  htmlFor="my-drawer"
+                  aria-label="close sidebar"
+                  className="drawer-overlay"
+                ></label>
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                  {/* Sidebar content here */}
+                  <li>
+                    <NavLinks />
+                  </li>
                 </ul>
               </div>
-              <div className="hidden lg:flex lg:items-center">
-                <ul className="menu menu-horizontal">
-                  <NavLinks />
-                </ul>
-              </div>
-            </div>
-
-            <div className="navbar-end mr-6">
-              <NavLink
-                to="cart"
-                className="btn bg-green-600 btn-circle btn-md ml-4"
-              >
-                <div className="indicator ">
-                  <BsCart3 className="h-6 w-6" />
-                  <span className="badge badge-sm badge-primary indicator-item">
-                    {numItemsInCart}
-                  </span>
-                </div>
-              </NavLink>
             </div>
           </div>
-        </nav>
+          <div className="hidden lg:flex lg:items-center">
+            <ul className="menu menu-horizontal">
+              <NavLinks />
+            </ul>
+          </div>
+        </div>
+
+        <div className="navbar-end mr-3">
+          <NavLink
+            to="cart"
+            className="btn bg-gray-100 btn-circle btn-md ml-4 border-1 border-green-950"
+          >
+            <div className="indicator">
+              <BsCart3 className="size-6 text-green-900" />
+              <button className="badge badge-sm badge-primary indicator-item z-0 bg-green-800">
+                {numItemsInCart}
+              </button>
+            </div>
+          </NavLink>
+        </div>
       </div>
-    </>
+    </nav>
   );
 };
 export default Navbar;
