@@ -4,18 +4,24 @@ import Search from "./Search";
 
 const Header = () => {
   return (
-    <header className="bg-gray-100 shadow-xl py-2 text-neutral-content">
-      <div className="mx-auto max-w-6xl px-8 flex justify-center sm:justify-end pb-4">
+    <header className="bg-gray-100 shadow-xl text-neutral-content">
+      <div className="w-full  flex flex-row p-1 font-['Kanit']  justify-center  bg-green-700">
         <div className="flex gap-x-6 justify-center items-center text-black">
-          <Link to="/login" className="link link-hover text-xs sm:text-sm">
+          <Link
+            to="/login"
+            className="link link-hover text-xs sm:text-sm text-gray-300 hover:text-gray-950 underline transition delay-10"
+          >
             Sign in / Guest
           </Link>
-          <Link to="/register" className="link link-hover text-xs sm:text-sm">
+          <Link
+            to="/register"
+            className="link link-hover text-xs sm:text-sm text-gray-300 hover:text-gray-950 underline transition delay-10"
+          >
             Create an Account
           </Link>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl px-8 flex justify-between items-center">
+      <div className="px-8 flex-col flex justify-between items-center">
         <img src={logo} alt="logo" />
         <Search />
         <div className="flex items-center">

@@ -12,7 +12,6 @@ const Navbar = () => {
         <nav className="glass bg-black opacity-80">
           <div className="navbar mx-auto max-w-6xl px-2">
             <div className="navbar-start">
-              {/* DROPDOWN */}
               <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
                   <FaBarsStaggered className="h-6 w-6" />
@@ -30,7 +29,7 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            {/* CART LINK */}
+
             <div className="navbar-end mr-6">
               <NavLink
                 to="cart"
