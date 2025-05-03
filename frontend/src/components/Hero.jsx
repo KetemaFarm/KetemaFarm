@@ -1,47 +1,34 @@
 import { Link } from "react-router-dom";
-import hero1 from "../assets/hero1.png";
-import hero2 from "../assets/hero2.png";
-import hero3 from "../assets/hero3.png";
-import hero4 from "../assets/hero4.png";
-
-const carouselImages = [hero1, hero2, hero3, hero4];
-
+import hero from "../assets/heroImg.jpg";
 const Hero = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <div>
-        <h1 className="max-w-2xl text-4xl font-bold tracking-tight  sm:text-6xl ">
-          We’re changing the way people shop.
+    <div className="flex flex-col md:flex-row gap-3 items-center">
+      <div className="mx-3 ">
+        <h1 className="text-4xl font-bold text-center tracking-tight  sm:text-5xl font-['Montserrat'] ">
+          Your Urban Farming Marketplace – Grow, Sell, Thrive!
         </h1>
 
-        <p className="mt-8 max-w-xl text-lg leading-8">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua. Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-          qui lorem cupidatat commodo.
+        <p className="mt-8  leading-6 font-['Montserrat'] text-sm mx-8 text-center">
+          Buy fresh farm products, rent urban land, or sell your harvest – all
+          in one place." "Join as a buyer, landowner, or seller to grow your
+          city’s green future.
         </p>
-        <div className="mt-10 flex space-x-4">
-          <Link to="products" className="btn btn-primary">
+        <div className="mt-10   flex flex-row gap-4 justify-center">
+          <Link
+            to="products"
+            className="btn btn-primary font-['Kanit'] bg-green-900 border-1 border-green-900"
+          >
             Browse Products
           </Link>
-          <Link to="lands" className="btn btn-primary">
+          <Link
+            to="lands"
+            className="btn btn-primary font-['Kanit'] bg-green-900 border-1 border-green-900"
+          >
             VIew Land Listings
           </Link>
         </div>
       </div>
-      <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
-        {carouselImages.map((image, index) => {
-          return (
-            <div key={index} className="carousel-item">
-              <img
-                src={image}
-                alt="image"
-                className="rounded-box h-full w-80 object-cover"
-              />
-            </div>
-          );
-        })}
-      </div>
+      <img src={hero} alt="hero Image" className="w-200" />
     </div>
   );
 };

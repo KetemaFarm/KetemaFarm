@@ -5,7 +5,7 @@ const AppLayout = () => {
   const navigation = useNavigation();
   const isPageLoading = navigation.state === "loading";
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <div>
         <Header />
         <Navbar />
@@ -13,7 +13,7 @@ const AppLayout = () => {
       {isPageLoading ? (
         <Loading />
       ) : (
-        <section className="mx-auto px-6">
+        <section className="">
           <Outlet />
         </section>
       )}
