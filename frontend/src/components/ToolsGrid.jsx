@@ -33,27 +33,32 @@ const ToolsGrid = () => {
   ];
 
   return (
-    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {tools.map((tool) => {
-        const { title, price, image } = tool;
+    <div className="pt-12 flex flex-row justify-center flex-wrap gap-8 ">
+      {tools.map((product) => {
+        const { title, price, image } = product;
         return (
           <Link
-            key={tool.id}
-            to={`/tools/${tool.id}`}
-            className="card w-full shadow-xl hover:shadow-2xl transition duration-300"
+            key={tools.id}
+            to={`/products/${tools.id}`}
+            className="card w-70 shadow-xl hover:shadow-2xl transition duration-300 border-1 border-green-900 "
           >
-            <figure className="px-4 pt-4">
+            <figure className="p-4">
               <img
                 src={image}
                 alt={title}
-                className="rounded-xl h-64 md:h-48 w-full object-cover"
+                className="rounded-xl h-64 md:h-48 w-full object-cover "
               />
             </figure>
             <div className="card-body items-center text-center">
-              <h2 className="card-productName capitalize tracking-wider">
+              <h2 className="card-productName capitalize tracking-wider font-['Montserrat']">
                 {title}
               </h2>
-              <span className="text-secondary">{price}</span>
+              <span className="text-secondary font-['Montserrat']">
+                {price}Br
+              </span>
+              <button className="font-['Kanit'] bg-green-900 text-gray-100 p-1 rounded-lg w-50 ">
+                View details
+              </button>
             </div>
           </Link>
         );
