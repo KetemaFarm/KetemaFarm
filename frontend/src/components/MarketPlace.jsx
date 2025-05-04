@@ -206,7 +206,7 @@ const MarketPlace = () => {
                       ${product.price}
                     </span>
                     <button className="bg-green-900 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-md text-sm transition font-['Rubik']">
-                      Add to Basket
+                      view details
                     </button>
                   </div>
                 </div>
