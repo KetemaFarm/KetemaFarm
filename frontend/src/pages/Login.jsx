@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"; // Assuming you're using React Router
-
+import logo from "../assets/logo.png";
 const Login = () => {
   const [loginData, setLoginData] = useState({
     phone: "",
@@ -42,9 +42,9 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-green-50 flex items-center justify-center p-4">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-green-700">Welcome Back</h2>
-          <p className="text-gray-600 mt-2">
+        <div className=" mb-6 flex flex-col items-center">
+          <img className="w-30" src={logo} alt="logo" />
+          <p className="text-gray-600 mt-2 font-['Rubik'] text-xs">
             Log in to your organic food account
           </p>
         </div>
@@ -59,7 +59,7 @@ const Login = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-gray-700 mb-1 font-['Kanit']"
             >
               Phone Number
             </label>
@@ -69,7 +69,7 @@ const Login = () => {
               name="phone"
               value={loginData.phone}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 text-[10px] font-['Montserrat'] focus:ring-green-500"
               placeholder="Enter your phone number"
               required
             />
@@ -78,7 +78,7 @@ const Login = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-gray-700 mb-1 font-['Kanit']"
             >
               Password
             </label>
@@ -88,24 +88,24 @@ const Login = () => {
               name="password"
               value={loginData.password}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-3 py-2 text-[10px]  font-['Montserrat'] border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Enter your password"
               required
               minLength="6"
             />
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-row items-center justify-between">
             <div className="flex items-center">
               <input
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                className="h-3 w-3 text-green-600 focus:ring-green-500 border-gray-300 rounded"
               />
               <label
                 htmlFor="remember-me"
-                className="ml-2 block text-sm text-gray-700"
+                className="ml-2 block text-[10px] font-['Montserrat'] text-gray-700"
               >
                 Remember me
               </label>
@@ -114,7 +114,7 @@ const Login = () => {
             <div className="text-sm">
               <Link
                 to="/forgot-password"
-                className="font-medium text-green-600 hover:text-green-500"
+                className="font-medium text-green-600 hover:text-green-500 font-['Montserrat'] text-[10px]"
               >
                 Forgot password?
               </Link>
