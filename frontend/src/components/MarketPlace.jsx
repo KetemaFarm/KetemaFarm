@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaAngleDown } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
 
 const MarketPlace = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -111,8 +113,8 @@ const MarketPlace = () => {
       : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className="container mx-auto  px-4 ">
-      <div className="flex flex-col   md:flex-row md:justify-between">
+    <div className="container mx-auto px-4 ">
+      <div className="flex flex-col  md:flex-row md:justify-between">
         {/* Category sidebar */}
         <div className="w-full md:w-64 bg-white p-4 rounded-lg shadow-sm border border-emerald-100">
           <h2 className="text-xl font-semibold mb-4 pb-2 border-b border-emerald-100 text-emerald-700 font-['Rubik']">
@@ -122,9 +124,9 @@ const MarketPlace = () => {
             {categories.map((category) => (
               <li key={category} className="mb-2">
                 <button
-                  className={`w-full text-left py-2 px-3 rounded hover:bg-emerald-50 transition font-['Kanit'] ${
+                  className={`w-full text-left py-2 px-3 rounded hover:bg-green-100 transition font-['Kanit'] ${
                     selectedCategory === category
-                      ? "bg-emerald-100 text-emerald-800 font-medium "
+                      ? "border-1 border-green-950 text-emerald-800 font-medium "
                       : "text-stone-700 font-['Kanit']"
                   }`}
                   onClick={() => setSelectedCategory(category)}
@@ -137,12 +139,55 @@ const MarketPlace = () => {
         </div>
 
         {/* Products grid */}
-        <div className="flex-1">
+        <div className="flex-1 mt-6 md:mt-0 mb-5">
+          <div className="flex flex-row justify-end mb-2 mr-8 md:mr-24 lg:mr-16 ">
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 border-1 border-green-800"
+              >
+                <p className="font-['Kanit'] ">Filter by</p>
+                <FaAngleDown className="flex flex-row gap-2 items-center" />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm flex flex-col items-start  "
+              >
+                <li className="font-['Rubik'] w-full">
+                  <a>price</a>
+                </li>
+                <li className="">
+                  <div className="dropdown dropdown-left ml-0 bg-white ">
+                    <div
+                      tabIndex={0}
+                      role="button"
+                      className="btn  border-0 p-0 bg-white font-['Rubik'] flex flex-row gap-2 pr-20 hover:bg-gray-200"
+                    >
+                      <FaAngleLeft />
+                      <p> city</p>
+                    </div>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu bg-base-100 rounded-box z-1 w-40 p-2 shadow-sm font-['Rubik']"
+                    >
+                      <li>
+                        <a>Addis Ababa</a>
+                      </li>
+                      <li>
+                        <a>Hawassa</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div className="flex flex-row gap-6 items-center justify-center flex-wrap">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="bg-white rounded-lg overflow-hidden border border-stone-200 hover:border-emerald-200 hover:shadow-md transition"
+                className="bg-white rounded-lg overflow-hidden  hover:border-gray-100 hover:shadow-md transition border-1 border-green-900"
               >
                 <img
                   src={product.image}
