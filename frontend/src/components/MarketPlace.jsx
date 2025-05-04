@@ -111,25 +111,21 @@ const MarketPlace = () => {
       : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className="container mx-auto px-4 py-8 bg-stone-50">
-      <h1 className="text-3xl font-bold mb-8 text-center text-emerald-800">
-        Organic Marketplace
-      </h1>
-
-      <div className="flex flex-col md:flex-row gap-8">
+    <div className="container mx-auto  px-4 ">
+      <div className="flex flex-col   md:flex-row md:justify-between">
         {/* Category sidebar */}
         <div className="w-full md:w-64 bg-white p-4 rounded-lg shadow-sm border border-emerald-100">
-          <h2 className="text-xl font-semibold mb-4 pb-2 border-b border-emerald-100 text-emerald-700">
+          <h2 className="text-xl font-semibold mb-4 pb-2 border-b border-emerald-100 text-emerald-700 font-['Rubik']">
             Categories
           </h2>
           <ul>
             {categories.map((category) => (
               <li key={category} className="mb-2">
                 <button
-                  className={`w-full text-left py-2 px-3 rounded hover:bg-emerald-50 transition ${
+                  className={`w-full text-left py-2 px-3 rounded hover:bg-emerald-50 transition font-['Kanit'] ${
                     selectedCategory === category
-                      ? "bg-emerald-100 text-emerald-800 font-medium"
-                      : "text-stone-700"
+                      ? "bg-emerald-100 text-emerald-800 font-medium "
+                      : "text-stone-700 font-['Kanit']"
                   }`}
                   onClick={() => setSelectedCategory(category)}
                 >
@@ -142,7 +138,7 @@ const MarketPlace = () => {
 
         {/* Products grid */}
         <div className="flex-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex flex-row gap-6 items-center justify-center flex-wrap">
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
@@ -154,17 +150,17 @@ const MarketPlace = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <div className="text-xs font-medium uppercase tracking-wide text-emerald-600 mb-1">
+                  <div className="text-sm font-medium uppercase tracking-wide text-green-800 mb-1 text-center font-['Kanit']">
                     {product.category}
                   </div>
-                  <h3 className="font-semibold text-lg mb-1 text-stone-800">
+                  <h3 className="font-semibold text-lg mb-1 text-stone-800 text-center font-['Rubik']">
                     {product.name}
                   </h3>
                   <div className="flex justify-between items-center mt-3">
-                    <span className="font-bold text-emerald-700">
+                    <span className="font-bold text-green-800 font-['Montserrat']">
                       ${product.price}
                     </span>
-                    <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-md text-sm transition">
+                    <button className="bg-green-900 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-md text-sm transition font-['Rubik']">
                       Add to Basket
                     </button>
                   </div>
